@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Untitled Document</title>
     <meta charset="UTF-8">
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/camera.js"></script>
+    
 </head>
+
 <body>
-<h1>juhu</h1>
+    <div style="width:640px; height:480px; margin:0 auto; background-color:#fff;">
+        <div>
+            <video id="camFeed" width="640" height="480" autoplay>
+            </video>
+        </div>
+
+        <div>
+            <canvas id="photo" width="320" height="240">
+            </canvas>
+        </div>
+
+        <div style="margin:0 auto; width:82px;">
+            <input type="button" value="Take Photo" onclick="takePhoto();">
+        </div>
+    </div>
 </body>
+
 </html>

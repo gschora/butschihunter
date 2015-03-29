@@ -12,7 +12,11 @@
 function autoReloadPage() {
     var fs = require('fs');
 
-    fs.watch('./', [], function () {
+    fs.watch('./js/', {recursive: true}, function () {
+        if (location)
+            location.reload(false);
+    });
+    fs.watch('./views/', {recursive: true}, function () {
         if (location)
             location.reload(false);
     });
